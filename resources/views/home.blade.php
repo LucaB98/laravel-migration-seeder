@@ -3,5 +3,11 @@
 @section('title','home')
 
 @section('main-content')
-    <h1>biglietto del treno</h1>
+
+    @forelse ($trains as $train)
+        <h1>{{$train->azienda}}</h1>
+    @empty
+    <h1>non ci sono treni</h1>
+    @endforelse
+        
 @endsection
